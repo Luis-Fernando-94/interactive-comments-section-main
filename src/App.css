@@ -1,0 +1,134 @@
+:root {
+  font-family: 'Rubik', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(228, 33%, 97%);
+}
+
+#container {
+  padding-bottom: 42px;
+  margin: auto;
+  width: 54vw;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contentAnswer {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 72px;
+
+  border-left: solid 3px hsl(223, 19%, 93%);
+}
+
+.cards {
+  padding: 22px;
+  margin-top: 42px;
+  display: flex;
+
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+
+  box-shadow: 1.5px 1.5px 2px hsl(239, 57%, 85%);
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 9px;
+  margin: 6px 22px 6px 0;
+
+  background-color: hsl(228, 33%, 97%);
+  border-radius: 8px;
+  border: solid 0.1px hsl(223, 19%, 93%);
+}
+
+.score span {
+  color: hsl(238, 40%, 52%);
+  font-weight: 500;
+  margin: 16px auto;
+}
+
+.contentUser {
+  display: inline-block;
+  width: 100%;
+}
+
+.replies {
+  display: inline-block;
+  width: 80%;
+}
+
+.contentUser header, .replies header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+}
+
+.status img {
+  width: 38px;
+}
+
+.name {
+  margin: auto 16px;
+  color: hsl(212, 24%, 26%);
+}
+
+.time {
+  color: hsl(211, 10%, 45%);
+}
+
+.reply {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: #ffffff00;
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+}
+
+.reply:hover {
+  cursor: pointer;
+}
+
+.reply span {
+  content: "";
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: url("./images/icon-reply.svg") no-repeat center;
+}
+
+.content {
+  margin-top: 14px;
+  color: hsl(211, 10%, 45%);
+  font-weight: 400;
+}
+
+
+.attribution {
+  margin-top: 12px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
