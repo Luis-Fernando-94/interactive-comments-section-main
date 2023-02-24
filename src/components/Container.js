@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import ContentAnswer from "./ContentAnswer";
+import InputComment from "./InputComment";
 
 function Container() {
   const [data, setData] = useState({});
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    fetch("./data.json", {method: "post"})
+    fetch("./data.json")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -30,6 +31,7 @@ function Container() {
             );
           })
         : console.log("waiting (comments)")}
+      <InputComment />
       <div className="attribution">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">

@@ -40,9 +40,9 @@ body {
   display: flex;
 
   background-color: hsl(0, 0%, 100%);
-  border-radius: 10px;
+  border-radius: 8px;
 
-  box-shadow: 1.5px 1.5px 2px hsl(239, 57%, 85%);
+  box-shadow: 1.5px 1.5px 4px hsl(239, 57%, 85%);
 }
 
 .score {
@@ -52,7 +52,7 @@ body {
   margin: 6px 22px 6px 0;
 
   background-color: hsl(228, 33%, 97%);
-  border-radius: 8px;
+  border-radius: 6px;
   border: solid 0.1px hsl(223, 19%, 93%);
 }
 
@@ -124,6 +124,59 @@ body {
 }
 
 
+
+
+
+
+.addComment {
+  display: flex;
+  align-items: flex-start;
+  padding: 22px;
+  margin-top: 42px;
+
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  box-shadow: 1.5px 1.5px 4px hsl(239, 57%, 85%);
+}
+
+.addComment img {
+  width: 50px;
+}
+
+.addComment form {
+  width: 100%;
+  display: flex;
+
+  margin-left: 16px;
+}
+
+.addComment form [type=text] {
+  width: calc(100% - 108px);
+  height: 80.5px;
+
+  margin-right: 16px;
+  /* padding: 32.25px 10px; */
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset 1.5px 1px 3px hsl(239, 57%, 85%);
+}
+
+.addComment form [type=submit] {
+  width: 108px;
+  height: 46px;
+
+  background-color: hsl(238, 40%, 52%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 9px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+
+
 .attribution {
   margin-top: 12px;
   font-size: 11px;
@@ -132,3 +185,39 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+
+
+
+/* @media (max-width: 480px) {
+
+  * {
+    font-size: 8px;
+  }
+
+  #container {
+    padding-bottom: 8px;
+    margin: auto;
+    width: 65%;
+  }
+
+  .contentAnswer {
+    width: 200px;
+  }
+
+  .contentUser {
+    width: fit-content;
+  }
+
+  .status img {
+    width: 16px;
+  }
+
+  .score {
+    width: 14px;
+
+    padding: 3px 4px;
+    margin: 3px 10px 3px 0;
+  }
+
+} */
