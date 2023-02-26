@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import ContentAnswer from "./ContentAnswer";
 import InputComment from "./InputComment";
+import Footer from "./Footer";
 
 function Container() {
   const [data, setData] = useState({});
@@ -32,13 +33,7 @@ function Container() {
           })
         : console.log("waiting (comments)")}
       <InputComment />
-      <div className="attribution">
-        Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">
-          Frontend Mentor
-        </a>
-        . Coded by <a href="https://github.com/Luis-Fernando-94">Luis Fernando</a>.
-      </div>
+      <Footer />
     </div>
   );
 }
