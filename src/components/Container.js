@@ -10,7 +10,7 @@ function Container() {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    fetch("./data.json", {method: "post"})
+    fetch("./data.json")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
