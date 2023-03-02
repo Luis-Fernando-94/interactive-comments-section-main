@@ -6,6 +6,8 @@ function ContentAnswer(props) {
   const [currentUser, setCurrentUser] = useState({});
   const [data, setData] = useState([]);
 
+  const contentAnswer = document.getElementsByClassName("contentAnswer");
+
   useEffect(() => {
     setCurrentUser(props.currentUser);
     setData(props.comment);

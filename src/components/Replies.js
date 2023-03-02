@@ -8,7 +8,6 @@ function Replies(props) {
   useEffect(() => {
     setCurrentUser(props.currentUser);
     setData(props.reply);
-    console.log(props.reply);
   }, [props]);
 
   function mouseOver(event) {
@@ -39,6 +38,24 @@ function Replies(props) {
     }
   }
 
+  function replyComments(event) {
+    const input = document.getElementsByClassName("addComment")[0];
+
+    if (event.target.getAttribute("class") == "reply") {
+      let button = event.target;
+      let comment = button.parentElement.parentElement.parentElement.parentElement.parentElement;
+      comment.append(input);
+      input.style.width = "100%";
+    } else if(event.target.tagName == "FONT" || event.target.tagName == "SPAN") {
+      let button = event.target.parentElement;
+      let comment = button.parentElement.parentElement.parentElement.parentElement.parentElement;
+      comment.append(input);
+      input.style.width = "100%";
+      input.style.marginTop = "0";
+    }
+
+  }
+
   return (
     <div className="replies">
       <header>
@@ -63,6 +80,7 @@ function Replies(props) {
                 className="reply"
                 onMouseOver={mouseOver}
                 onMouseOut={mouseOut}
+                onClick={replyComments}
               >
                 <span></span>Reply
               </button>

@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
+
 import amyrobson from "../images/avatars/image-amyrobson.png";
 // import juliusomo from "../images/avatars/image-juliusomo.png";
 import maxblagun from "../images/avatars/image-maxblagun.png";
 // import ramsesmiron from "../images/avatars/image-ramsesmiron.png";
-
-import reply from "../images/icon-reply.svg";
-import replyHover from "../images/icon-reply-hover.svg";
 
 function ContentUser(props) {
   const [currentUser, setCurrentUser] = useState({});
@@ -39,6 +37,24 @@ function ContentUser(props) {
     }
   }
 
+  function replyComments(event) {
+    const input = document.getElementsByClassName("addComment")[0];
+
+    if (event.target.getAttribute("class") == "reply") {
+      let button = event.target;
+      let comment = button.parentElement.parentElement.parentElement.parentElement.parentElement;
+      comment.append(input);
+      input.style.width = "100%";
+    } else if(event.target.tagName == "FONT" || event.target.tagName == "SPAN") {
+      let button = event.target.parentElement;
+      let comment = button.parentElement.parentElement.parentElement.parentElement.parentElement;
+      comment.append(input);
+      input.style.width = "100%";
+      input.style.marginTop = "42px";
+    }
+
+  }
+
   useEffect(() => {
     setCurrentUser(props.currentUser);
     setData(props.data);
@@ -67,6 +83,7 @@ function ContentUser(props) {
               className="reply"
               onMouseOver={mouseOver}
               onMouseOut={mouseOut}
+              onClick={replyComments}
             >
               <span></span>Reply
             </button>
