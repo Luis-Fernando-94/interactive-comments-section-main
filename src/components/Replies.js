@@ -53,6 +53,8 @@ function Replies(props) {
               ? data.user.username
               : console.log("waiting name (replies)")}
           </h4>
+          {currentUser.username && currentUser.username == data.user.username ?
+          <span className="currentUser">you</span> : console.log("_")}
           <p className="time">
             {data.createdAt
               ? data.createdAt

@@ -16,7 +16,7 @@ function ContentAnswer(props) {
       {(data.replies && data.replies !== [])
         ? data.replies.map((reply, i) => {
             return (
-              <div key={i} id={reply.id} className="cards">
+              <div key={i} id={reply.id} className="cards cardsAnswer">
                 <ScoreReplies reply={reply} />
                 <Replies currentUser={currentUser} reply={reply} />
               </div>

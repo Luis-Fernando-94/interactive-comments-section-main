@@ -26,11 +26,10 @@ body {
 
 .contentAnswer {
   width: 94%;
-  display: flex;
-  flex-direction: column;
-
+  display: grid;
+  grid-gap: 42px;
   padding-left: 72px;
-
+  margin-top: 42px;
   border-left: solid 3px hsl(223, 19%, 93%);
 }
 
@@ -38,11 +37,13 @@ body {
   padding: 22px;
   margin-top: 42px;
   display: flex;
-
   background-color: hsl(0, 0%, 100%);
   border-radius: 8px;
-
   box-shadow: 1.5px 1.5px 4px hsl(239, 57%, 85%);
+}
+
+.cardsAnswer {
+  margin-top: 0;
 }
 
 .score {
@@ -98,8 +99,19 @@ body {
 }
 
 .name {
-  margin: auto 16px;
+  margin: auto 10px auto 16px;
   color: hsl(212, 24%, 26%);
+}
+
+.currentUser {
+  display: inline-block;
+  margin-right: 18px;
+  padding: 2px 6px;
+  color: #fff;
+  background-color: hsl(238, 40%, 52%);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .time {
@@ -116,7 +128,6 @@ body {
   align-items: center;
   border: none;
   background-color: #ffffff00;
-  
   font-weight: 700;
 }
 
@@ -191,7 +202,6 @@ body {
   align-items: flex-start;
   padding: 22px;
   margin-top: 42px;
-
   background-color: hsl(0, 0%, 100%);
   border-radius: 8px;
   box-shadow: 1.5px 1.5px 4px hsl(239, 57%, 85%);
@@ -204,16 +214,13 @@ body {
 .addComment form {
   width: 100%;
   display: flex;
-
   margin-left: 16px;
 }
 
 .addComment form [type=text] {
   width: calc(100% - 108px);
   height: 80.5px;
-
   margin-right: 16px;
-  /* padding: 32.25px 10px; */
   padding: 10px;
   border-radius: 8px;
   border: none;
@@ -223,14 +230,12 @@ body {
 .addComment form [type=submit] {
   width: 108px;
   height: 46px;
-
   background-color: hsl(238, 40%, 52%);
   color: hsl(0, 0%, 100%);
   border-radius: 9px;
   border: none;
   text-transform: uppercase;
   font-weight: 700;
-
   transition: background 0.5s;
 }
 
