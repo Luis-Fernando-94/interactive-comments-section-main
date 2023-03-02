@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/interactive-comments-section-main/static/css/main.9e1c5536.css",
-    "main.js": "/interactive-comments-section-main/static/js/main.ce2cecbc.js",
+    "main.js": "/interactive-comments-section-main/static/js/main.d491f080.js",
     "static/js/787.a53e07ad.chunk.js": "/interactive-comments-section-main/static/js/787.a53e07ad.chunk.js",
     "index.html": "/interactive-comments-section-main/index.html",
     "static/media/icon-plus-hover.svg": "/interactive-comments-section-main/static/media/icon-plus-hover.2f5bff14a1de73fc0d40a8d8163d8684.svg",
@@ -15,11 +15,11 @@
     "static/media/icon-delete-hover.svg": "/interactive-comments-section-main/static/media/icon-delete-hover.00be18069dc6683e9bcb.svg",
     "static/media/icon-delete.svg": "/interactive-comments-section-main/static/media/icon-delete.86cedbf2e37529f9c8f1.svg",
     "main.9e1c5536.css.map": "/interactive-comments-section-main/static/css/main.9e1c5536.css.map",
-    "main.ce2cecbc.js.map": "/interactive-comments-section-main/static/js/main.ce2cecbc.js.map",
+    "main.d491f080.js.map": "/interactive-comments-section-main/static/js/main.d491f080.js.map",
     "787.a53e07ad.chunk.js.map": "/interactive-comments-section-main/static/js/787.a53e07ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9e1c5536.css",
-    "static/js/main.ce2cecbc.js"
+    "static/js/main.d491f080.js"
   ]
 }
