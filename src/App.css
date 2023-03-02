@@ -186,6 +186,11 @@ body {
   background: url("./images/icon-edit-hover.svg") no-repeat center;
 }
 
+.replyingTo {
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+}
+
 .content {
   margin-top: 14px;
   color: hsl(211, 10%, 45%);

@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import amyrobson from "../images/avatars/image-amyrobson.png";
 
-import reply from "../images/icon-reply.svg";
-import replyHover from "../images/icon-reply-hover.svg";
-
 function Replies(props) {
   const [currentUser, setCurrentUser] = useState({});
   const [data, setData] = useState({});
@@ -11,9 +8,8 @@ function Replies(props) {
   useEffect(() => {
     setCurrentUser(props.currentUser);
     setData(props.reply);
+    console.log(props.reply);
   }, [props]);
-
-  // const h = document.getElementsByTagName("header")[0];
 
   function mouseOver(event) {
     let target = event.target;
@@ -92,6 +88,7 @@ function Replies(props) {
       </header>
 
       <p className="content">
+        <span className="replyingTo">@{data.replyingTo ? data.replyingTo + " " : console.log("_")}</span>
         {data.content ? data.content : console.log("waiting content (replies)")}
       </p>
     </div>
