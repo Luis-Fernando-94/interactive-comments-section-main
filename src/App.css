@@ -106,17 +106,37 @@ body {
   color: hsl(211, 10%, 45%);
 }
 
-.reply {
+.btns {
+  position: relative;
+  display: flex;
+}
+
+.reply, .delete, .edit {
   display: flex;
   align-items: center;
   border: none;
   background-color: #ffffff00;
-  color: hsl(238, 40%, 52%);
+  
   font-weight: 700;
 }
 
-.reply:hover {
+.reply, .edit {
+  color: hsl(238, 40%, 52%);
+}
+
+.delete {
+  margin-right: 8px;
+  color: hsl(358, 79%, 66%);
+}
+
+.reply:hover, .edit:hover {
   cursor: pointer;
+  color: hsl(239, 57%, 85%);
+}
+
+.delete:hover {
+  cursor: pointer;
+  color: hsl(357, 100%, 86%);
 }
 
 .reply span {
@@ -125,6 +145,34 @@ body {
   width: 20px;
   height: 20px;
   background: url("./images/icon-reply.svg") no-repeat center;
+}
+
+.reply .icon {
+  background: url("./images/icon-reply-hover.svg") no-repeat center;
+}
+
+.delete span {
+  content: "";
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: url("./images/icon-delete.svg") no-repeat center;
+}
+
+.delete .icon {
+  background: url("./images/icon-delete-hover.svg") no-repeat center;
+}
+
+.edit span {
+  content: "";
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: url("./images/icon-edit.svg") no-repeat center;
+}
+
+.edit .icon {
+  background: url("./images/icon-edit-hover.svg") no-repeat center;
 }
 
 .content {

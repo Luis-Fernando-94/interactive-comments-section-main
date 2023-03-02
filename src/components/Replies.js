@@ -5,51 +5,44 @@ import reply from "../images/icon-reply.svg";
 import replyHover from "../images/icon-reply-hover.svg";
 
 function Replies(props) {
+  const [currentUser, setCurrentUser] = useState({});
   const [data, setData] = useState({});
 
-  function mouseOver(element) {
-    let e = element.target;
-    let header = document.getElementsByTagName("header");
-    let status = document.getElementsByClassName("status");
-
-    for (let i = 0; i < status.length; i++) {
-      if (e.getAttribute("reply")) {
-        e.children[0].style.background = `url(${replyHover}) no-repeat center`;
-        e.style.color = "hsl(239, 57%, 85%)";
-        header[i].style.background = "none";
-        status[i].style.background = "none";
-      } else {
-        e.parentElement.children[0].style.background = `url(${replyHover}) no-repeat center`;
-        e.parentElement.style.color = "hsl(239, 57%, 85%)";
-        header[i].style.background = "none";
-        status[i].style.background = "none";
-      }
-    }
-  }
-
-  function mouseOut(element) {
-    let e = element.target;
-    let header = document.getElementsByTagName("header");
-    let status = document.getElementsByClassName("status");
-
-    for (let i = 0; i < status.length; i++) {
-      if (e.getAttribute("reply")) {
-        e.children[0].style.background = `url(${reply}) no-repeat center`;
-        e.style.color = "hsl(238, 40%, 52%)";
-        header[i].style.background = "none";
-        status[i].style.background = "none";
-      } else {
-        e.parentElement.children[0].style.background = `url(${reply}) no-repeat center`;
-        e.parentElement.style.color = "hsl(238, 40%, 52%)";
-        header[i].style.background = "none";
-        status[i].style.background = "none";
-      }
-    }
-  }
-
   useEffect(() => {
+    setCurrentUser(props.currentUser);
     setData(props.reply);
   }, [props]);
+
+  // const h = document.getElementsByTagName("header")[0];
+
+  function mouseOver(event) {
+    let target = event.target;
+  
+    if (target.getAttribute("class") == "reply" || target.getAttribute("class") == "delete" || target.getAttribute("class") == "edit") {
+      let span = target.children[0];
+      span.setAttribute("class", "icon");
+    } else if(target.tagName == "FONT") {
+      let span = target.parentElement.children[0];
+      span.setAttribute("class", "icon");
+    } else if(target.tagName == "SPAN") {
+      target.setAttribute("class", "icon");
+    }
+  }
+
+  function mouseOut(event) {
+    let target = event.target;
+  
+    if (target.getAttribute("class") == "reply" || target.getAttribute("class") == "delete" || target.getAttribute("class") == "edit") {
+      let span = target.children[0];
+      span.removeAttribute("class");
+    } else if(target.tagName == "FONT") {
+      let span = target.parentElement.children[0];
+      span.removeAttribute("class");
+    } else if(target.tagName == "SPAN") {
+      target.removeAttribute("class");
+    }
+  }
+
   return (
     <div className="replies">
       <header>
@@ -66,9 +59,34 @@ function Replies(props) {
               : console.log("waiting time (replies)")}
           </p>
         </div>
-        <button className="reply" onMouseOver={(element) => mouseOver(element)} onMouseOut={(element) => mouseOut(element)}>
-          <span></span>Reply
-        </button>
+          {currentUser.username && currentUser.username !== data.user.username ? (
+            <div className="btns">
+              <button
+                className="reply"
+                onMouseOver={mouseOver}
+                onMouseOut={mouseOut}
+              >
+                <span></span>Reply
+              </button>
+            </div>
+          ) : (
+            <div className="btns">
+              <button
+                className="delete"
+                onMouseOver={mouseOver}
+                onMouseOut={mouseOut}
+              >
+                <span></span>Delete
+              </button>
+              <button
+              className="edit"
+              onMouseOver={mouseOver}
+              onMouseOut={mouseOut}
+              >
+                <span></span>Edit
+              </button>
+            </div>
+          )}
       </header>
 
       <p className="content">

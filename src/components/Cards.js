@@ -3,16 +3,18 @@ import Score from "./Score";
 import ContentUser from "./ContentUser";
 
 function Cards(props) {
-  const [data, setData] = useState([]);
+  const [currentUser, setCurrentUser] = useState({});
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    setData(props.comment);
+    setCurrentUser(props.currentUser);
+    setComments(props.comment);
   }, [props]);
 
   return (
-    <div id={data.id} className="cards">
-      <Score data={data} />
-      <ContentUser data={data} />
+    <div id={comments.id} className="cards">
+      <Score data={comments} />
+      <ContentUser currentUser={currentUser} data={comments} />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Footer from "./Footer";
 
 function Container() {
   const [data, setData] = useState({});
+  const [currentUser, setCurrentUser] = useState({});
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ function Container() {
   }, []);
 
   useEffect(() => {
+    setCurrentUser(data.currentUser);
     setComments(data.comments);
   }, [data]);
 
@@ -26,8 +28,8 @@ function Container() {
         ? comments.map((comment, i) => {
             return (
               <div key={i} className="comment">
-                <Cards comment={comment} />
-                <ContentAnswer comment={comment} />
+                <Cards currentUser={currentUser} comment={comment} />
+                <ContentAnswer currentUser={currentUser} comment={comment} />
               </div>
             );
           })

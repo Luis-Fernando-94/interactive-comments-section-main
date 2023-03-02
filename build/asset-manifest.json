@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/interactive-comments-section-main/static/css/main.7b9a1ab2.css",
-    "main.js": "/interactive-comments-section-main/static/js/main.1a98afb0.js",
+    "main.css": "/interactive-comments-section-main/static/css/main.53557798.css",
+    "main.js": "/interactive-comments-section-main/static/js/main.2c29d669.js",
     "static/js/787.a53e07ad.chunk.js": "/interactive-comments-section-main/static/js/787.a53e07ad.chunk.js",
     "index.html": "/interactive-comments-section-main/index.html",
     "static/media/icon-plus-hover.svg": "/interactive-comments-section-main/static/media/icon-plus-hover.2f5bff14a1de73fc0d40a8d8163d8684.svg",
     "static/media/icon-plus.svg": "/interactive-comments-section-main/static/media/icon-plus.0037a825a550965779412c2890bd328b.svg",
+    "static/media/icon-edit-hover.svg": "/interactive-comments-section-main/static/media/icon-edit-hover.98fc2ae01433a22f6cb1.svg",
+    "static/media/icon-edit.svg": "/interactive-comments-section-main/static/media/icon-edit.b0c7f9ebaec367bd3ae2.svg",
     "static/media/icon-reply-hover.svg": "/interactive-comments-section-main/static/media/icon-reply-hover.6481f91b4c171e01004aadf07180e60f.svg",
     "static/media/icon-minus-hover.svg": "/interactive-comments-section-main/static/media/icon-minus-hover.f8ec4c84487cbaf52665b2fe7e09f569.svg",
     "static/media/icon-reply.svg": "/interactive-comments-section-main/static/media/icon-reply.bfb4589d45cd96abd45e3b82f7e7bbc6.svg",
     "static/media/icon-minus.svg": "/interactive-comments-section-main/static/media/icon-minus.4aa6933cb1575b3c54fa67d84a61efaf.svg",
-    "main.7b9a1ab2.css.map": "/interactive-comments-section-main/static/css/main.7b9a1ab2.css.map",
-    "main.1a98afb0.js.map": "/interactive-comments-section-main/static/js/main.1a98afb0.js.map",
+    "static/media/icon-delete-hover.svg": "/interactive-comments-section-main/static/media/icon-delete-hover.00be18069dc6683e9bcb.svg",
+    "static/media/icon-delete.svg": "/interactive-comments-section-main/static/media/icon-delete.86cedbf2e37529f9c8f1.svg",
+    "main.53557798.css.map": "/interactive-comments-section-main/static/css/main.53557798.css.map",
+    "main.2c29d669.js.map": "/interactive-comments-section-main/static/js/main.2c29d669.js.map",
     "787.a53e07ad.chunk.js.map": "/interactive-comments-section-main/static/js/787.a53e07ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b9a1ab2.css",
-    "static/js/main.1a98afb0.js"
+    "static/css/main.53557798.css",
+    "static/js/main.2c29d669.js"
   ]
 }
