@@ -7,7 +7,9 @@ import InputComment from "./InputComment";
 import Footer from "./Footer";
 
 // Action ---------------------------------
-import { listComments } from "../actions/listCommentsAction";
+import { allData } from "../actions/listCommentsAction";
+
+import { cmts } from "../reducers/commentsReducer";
 
 function Container() {
   const [currentUser, setCurrentUser] = useState({});
@@ -19,7 +21,7 @@ function Container() {
 
   useEffect(() => {
     fetch("./data.json").then(res => res.json()).then(res => {
-      dispatch(listComments(res));
+      dispatch(allData(res));
     })
   }, [])
 
@@ -30,6 +32,7 @@ function Container() {
 
   useEffect(() => {
     setComments(updatedComments);
+    console.log(updatedComments);
   }, [updatedComments])
 
   return (

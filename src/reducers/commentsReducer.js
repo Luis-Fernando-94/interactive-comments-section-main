@@ -10,25 +10,32 @@ export function listCommentsReducer(state = {}, action) {
 export function addCommentReducer(state = [], action) {
     switch (action.type) {
         case "ADD_COMMENT":
-            return state = [...action.payload.comments, {
+            let comment = {
                 id: idGenerator(),
                 content: action.payload.content,
                 createdAt: "teste ainda",
                 score: 0,
                 user: {
-                    image: { 
+                    image: {
                         png: "./images/avatars/image-juliusomo.png",
                         webp: "./images/avatars/image-juliusomo.webp"
                     },
                     username: "juliusomo"
                 },
                 replies: []
-            }];
+            }
+
+            let comments = action.payload.comments;
+
+            comments.push(comment);
+            state = [...comments];
+            return state;
+
         default:
             return state;
     }
 }
 
 function idGenerator() {
-    return Math.floor(Math.random() * 100);
+    return Math.floor(Math.random() * 10000);
 }

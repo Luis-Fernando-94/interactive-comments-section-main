@@ -42,6 +42,7 @@ body {
 }
 
 .cards {
+  width: 100%;
   padding: 22px;
   margin-top: 42px;
   display: flex;
